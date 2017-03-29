@@ -25,16 +25,20 @@ function Pacman(x,y){
     };
   this.move = function(){
       if(keyIsDown(UP_ARROW)){
-          this.y = this.y -= 5;
+          this.y = this.y - 5;
+          this.rotation = 270;
       }
       if(keyIsDown(DOWN_ARROW)){
-          this.y = this.y += 5;
+          this.y = this.y + 5;
+          this.rotation = 90;
       }
       if(keyIsDown(RIGHT_ARROW)){
-          this.x = this.x += 5;
+          this.x = this.x + 5;
+          this.rotation = 0;
       }
       if(keyIsDown(LEFT_ARROW)){
-          this.x = this.x -= 5;
+          this.x = this.x - 5;
+          this.rotation = 180;
       }
   };
   this.boundary = function(){
